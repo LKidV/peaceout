@@ -3,21 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>peaceout</title>
+    <meta name="description" content="Peace Out — a USC student-run photography and film studio.">
+    <title>Peace Out — Photography & Film</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Peaceout</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="wordmark" href="#home" aria-label="Peace Out home">Peace Out</a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#home" aria-current="page">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+        </nav>
+        <a class="brand-stamp" href="#contact" aria-label="Instagram contact" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle class="instagram-dot" cx="17.5" cy="6.5" r="1" />
+            </svg>
+        </a>
     </header>
 
-    <main>
-        <h2>A USC Student Runned Studio...</h2>
+    <main id="main" tabindex="-1">
+        <div class="story">
+            <span class="scene-anchor" id="home" aria-hidden="true"></span>
+            <span class="scene-anchor" id="portfolio" aria-hidden="true"></span>
+            <span class="scene-anchor scene-anchor--about" id="about" aria-hidden="true"></span>
+            <span class="scene-anchor scene-anchor--studio" id="studio" aria-hidden="true"></span>
+
+            <div class="stage">
+                <!-- B1: three equal columns fill the first screen. -->
+                <section class="scene scene--work" aria-label="Photography and film">
+                    <div class="work-categories">
+                        <h1>Portraits</h1>
+                        <h2>Short Film</h2>
+                        <h2><abbr title="Music videos">MV</abbr></h2>
+                    </div>
+                    <a class="scroll-cue" href="#about" aria-label="Scroll to meet the studio">
+                        <svg viewBox="0 0 32 40" fill="none" aria-hidden="true">
+                            <path d="M7 9 16 19 25 9M7 20 16 30 25 20" />
+                        </svg>
+                    </a>
+                </section>
+
+                <!-- B2: slides over B1, then wipes upward to reveal B3. -->
+                <section class="scene scene--intro" aria-labelledby="studio-introduction">
+                    <h2 id="studio-introduction">A USC student-run studio<span class="ellipsis">...</span></h2>
+                </section>
+
+                <!-- B3: intentionally blank, white, and full screen. -->
+                <section class="scene scene--white" aria-label="Studio canvas"></section>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>2026 Peaceout</p>
+    <footer class="site-footer" id="contact">
+        <h2>Contact us!</h2>
+        <ul class="contact-methods" aria-label="Contact methods">
+            <li>Email</li>
+            <li>Phone</li>
+            <li>Instagram</li>
+        </ul>
     </footer>
-    
 </body>
 </html>
